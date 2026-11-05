@@ -57,3 +57,51 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Smooth 60fps compositor-only image animations */
+@keyframes kenBurnsFloat {
+  0% {
+    transform: scale(1) translate3d(0px, 0px, 0px);
+  }
+  50% {
+    transform: scale(1.08) translate3d(-1.5%, -1.5%, 0px);
+  }
+  100% {
+    transform: scale(1) translate3d(0px, 0px, 0px);
+  }
+}
+
+@keyframes modalEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.94) translate3d(0px, 10px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate3d(0px, 0px, 0px);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate3d(0px, -8px, 0px) scale(1.02);
+  }
+}
+
+.animate-ken-burns {
+  animation: kenBurnsFloat 12s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-modal-in {
+  animation: modalEntrance 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float-gentle {
+  animation: floatGentle 6s ease-in-out infinite;
+  will-change: transform;
+}
+

@@ -1274,7 +1274,7 @@ export default function App() {
                           height: 'clamp(320px, 50vw, 480px)',
                           objectFit: 'contain',
                         }}
-                        className="drop-shadow-[0_24px_36px_rgba(44,48,46,0.18)] transition-transform duration-150"
+                        className="animate-float-gentle drop-shadow-[0_24px_36px_rgba(44,48,46,0.18)] transition-transform duration-150"
                       />
                     </div>
 
@@ -2016,10 +2016,10 @@ export default function App() {
           onClick={() => setActiveModal(null)}
         >
           <div
-            className="bg-[#FBFBF9] border border-[#C5A880]/50 rounded-[24px] max-w-2xl w-full overflow-hidden shadow-xl"
+            className="animate-modal-in bg-[#FBFBF9] border border-[#C5A880]/50 rounded-[24px] max-w-2xl w-full overflow-hidden shadow-xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative h-60 sm:h-72 bg-[#1C201E]">
+            <div className="relative h-60 sm:h-72 bg-[#1C201E] overflow-hidden group">
               <img
                 src={activeModal.image}
                 alt={activeModal.title}
@@ -2031,6 +2031,7 @@ export default function App() {
                   );
                 }}
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                className="animate-ken-burns transition-transform duration-700 group-hover:scale-110"
               />
               <button
                 type="button"
