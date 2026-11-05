@@ -1245,7 +1245,7 @@ export default function App() {
                       </svg>
                     </div>
 
-                    {/* LAYER 2: Objek Fokal (translateZ(0px)) — Patung Pahlawan */}
+                    {/* LAYER 2: Objek Fokal (translateZ(0px)) — Patung Marmer Klasik */}
                     <div
                       ref={focalStatueRef}
                       style={{ transform: 'translate3d(0px, 0px, 0px)' }}
@@ -1253,18 +1253,28 @@ export default function App() {
                     >
                       <img
                         src={PORTFOLIO_DATA.identity.heroImage}
-                        alt="Monumen Patung Pahlawan Klasik di atas bukit bunga Blue Moonweed"
+                        alt="Patung Marmer Klasik Penutup Mata"
                         referrerPolicy="no-referrer"
                         onError={(e) => {
-                          e.currentTarget.onerror = null;
-                          e.currentTarget.src = getFallbackSvgDataUri('statue');
+                          const target = e.currentTarget;
+                          const tried = target.getAttribute('data-tried') || '';
+                          if (!tried.includes('assets-images')) {
+                            target.setAttribute('data-tried', tried + ' assets-images');
+                            target.src = '/assets/images/patung.webp';
+                          } else if (!tried.includes('assets-aistudio')) {
+                            target.setAttribute('data-tried', tried + ' assets-aistudio');
+                            target.src = '/assets/aistudio/patung.webp';
+                          } else {
+                            target.onerror = null;
+                            target.src = getFallbackSvgDataUri('statue');
+                          }
                         }}
                         style={{
-                          width: 'clamp(250px, 42vw, 410px)',
-                          height: 'clamp(310px, 48vw, 470px)',
+                          width: 'clamp(260px, 44vw, 420px)',
+                          height: 'clamp(320px, 50vw, 480px)',
                           objectFit: 'contain',
                         }}
-                        className="drop-shadow-[0_22px_32px_rgba(44,48,46,0.14)] transition-transform duration-150"
+                        className="drop-shadow-[0_24px_36px_rgba(44,48,46,0.18)] transition-transform duration-150"
                       />
                     </div>
 
