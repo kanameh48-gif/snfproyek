@@ -87,7 +87,7 @@ export const PORTFOLIO_DATA = {
     collageImages: [
       {
         id: 'bab-1',
-        src: './images/bab-1.webp',
+        src: '/src/assets/images/regenerated_image_1793874567087.jpg',
         fallbackKey: 'bab-1',
         title: 'Meja Kerja & Sketsa',
         caption: 'Eksperimen tata letak proporsi emas & tipografi klasik.',
@@ -95,7 +95,7 @@ export const PORTFOLIO_DATA = {
       },
       {
         id: 'bab-2',
-        src: './images/bab-2.webp',
+        src: '/src/assets/images/regenerated_image_1793874568637.jpg',
         fallbackKey: 'bab-2',
         title: 'Instrumen LERP & Waktu',
         caption: 'Kalibrasi interpolasi gerak 60fps berbasis fisika ringan.',
@@ -103,7 +103,7 @@ export const PORTFOLIO_DATA = {
       },
       {
         id: 'bab-3',
-        src: './images/bab-3.webp',
+        src: '/src/assets/images/regenerated_image_1793874570352.jpg',
         fallbackKey: 'bab-3',
         title: 'Padang Blue Moonweed',
         caption: 'Studi palet warna tenang dari memori perjalanan utara.',
