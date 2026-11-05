@@ -1,0 +1,6 @@
+{
+  "name": "Keripikubi — Jurnal Karya & Eksperimen",
+  "description": "Portofolio editorial interaktif bertema jurnal perjalanan klasik Sousou no Frieren dengan panggung diorama 2.5D, kronik bab, dan arsip panoramik.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

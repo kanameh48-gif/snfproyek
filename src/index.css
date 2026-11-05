@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-parchment: #FBFBF9;
+    --bg-surface: #F4F6F8;
+    --text-ink: #2C302E;
+    --text-slate: #64748B;
+    --accent-gold: #C5A880;
+    --accent-blue: #4A7C9B;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FBFBF9;
+    color: #2C302E;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-editorial {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 2.5D Stage & GPU optimization */
+.stage-perspective {
+  perspective: 1000px;
+  touch-action: pan-y;
+}
+
+.stage-preserve-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Restricted strictly to Hero floating micro-cards per mobile GPU constraint */
+.hero-glass-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(197, 168, 128, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Hide native scrollbar for horizontal carousel while keeping native touch scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
